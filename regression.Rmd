@@ -1,5 +1,4 @@
 ---
-title: "Homework 1"
 author: "Sheryl Hsiung"
 date: 'Assigned: October 23, 2019'
 output: 
@@ -8,23 +7,7 @@ output:
     toc_depth: 3
     theme: cerulean
     highlight: tango
----
-
-##### This homework is due by **10:20AM on Wednesday, October 30**.  
-
-##### To complete this assignment, follow these steps:
-
-1. Download the `homework1.Rmd` file from Canvas or the course website.
-
-2. Open `homework1.Rmd` in RStudio.
-
-3. Replace the "Your Name Here" text in the `author:` field with your own name.
-
-4. Supply your solutions to the homework by editing `homework1.Rmd`.
-
-5. When you have completed the homework and have **checked** that your code both runs in the Console and knits correctly when you click `Knit HTML`, rename the R Markdown file to `homework1_YourNameHere.Rmd`, and submit both the `.Rmd` file and the `.html` output file on Canvas.  (YourNameHere should be changed to your own name.)
-
-##### Homework tips:
+--- 
 
 1. Recall the following useful RStudio hotkeys.
 
@@ -323,7 +306,13 @@ stat_smooth(method = "lm", formula = y ~ poly(x, 9)) + ggtitle("medv ~ poly(lsta
 ##### **(c)** Use `ggplot2`'s `stat_smooth()` overlays to try out *different step functions* for modeling the relationship between `cnt` and `month`.  Display the model with the smallest number of "breaks" or "cuts" that nicely captures the trends in the data.  Explain your choice.  
 
 ```{r}
-# Edit me
+# cut to 4
+qplot(data = bikes, x = mnth, y = cnt,
+      xlab = "month", 
+      ylab = "average bike count",geom = "jitter") + 
+  stat_smooth(method = "lm", 
+              formula = y ~ cut(x, breaks = 4)) +
+  ggtitle("Step functions")
 ```
 
 - **Your answer here.**
