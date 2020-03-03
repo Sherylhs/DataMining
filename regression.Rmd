@@ -1,12 +1,5 @@
 ---
 author: "Sheryl Hsiung"
-date: 'Assigned: October 23, 2019'
-output: 
-  html_document:
-    toc: true
-    toc_depth: 3
-    theme: cerulean
-    highlight: tango
 --- 
 
 1. Recall the following useful RStudio hotkeys.
